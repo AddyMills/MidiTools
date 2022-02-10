@@ -5,12 +5,12 @@ import sys
 toDelete = ("MARKUP")
 
 try:
-    midRB4 = MidiFile(sys.argv[1])
+    midRB4 = MidiFile(sys.argv[1], clip = True)
 except IndexError:
     print("No Midi file found.")
     exit()
 try:
-    midRBHP = MidiFile(sys.argv[2])
+    midRBHP = MidiFile(sys.argv[2], clip = True)
 except:
     print(f'RBHP file not found for {os.path.basename(sys.argv[1])}')
     exit()
