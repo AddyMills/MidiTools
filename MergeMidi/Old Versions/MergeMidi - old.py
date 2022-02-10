@@ -2,6 +2,8 @@ from mido import MidiFile, MidiTrack, merge_tracks
 import os
 import sys
 
+toImport = ("PART REAL_GUITAR", "PART REAL_BASS", "PART REAL_GUITAR_22", "PART REAL_BASS_22", "PART KEYS", "PART REAL_KEYS_X", "PART REAL_KEYS_H", "PART REAL_KEYS_M", "PART REAL_KEYS_E", "PART KEYS_ANIM_RH", "PART KEYS_ANIM_LH")
+
 toDelete = ("MARKUP")
 
 try:
@@ -18,16 +20,8 @@ except:
 saveFile = os.path.basename(sys.argv[1])
 tempRB4 = MidiFile()
 
-upgradeNames = []
-
-for y, x in enumerate(midRBHP.tracks):
-    if y != 0:
-        upgradeNames.append(x.name)
-
 for x in midRB4.tracks:
     if x.name in toDelete:
-        pass
-    elif x.name in upgradeNames:
         pass
     else:
         tempRB4.add_track()
@@ -35,8 +29,8 @@ for x in midRB4.tracks:
 
 midRB4 = tempRB4
 
-for y, x in enumerate(midRBHP.tracks):
-    if y != 0:
+for x in midRBHP.tracks:
+    if x.name in toImport:
         midRB4.add_track()
         midRB4.tracks[-1] = x.copy()
 
