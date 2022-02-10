@@ -1,6 +1,12 @@
 # MidiTools
 Scripts that modify MIDI files in some way
 
+## LyricsNotes
+
+Add notes to lyrics events. Open the script and modify the "toAdd" variable to add your own track names.
+
+Usage: Run the script with a MIDI file as its only variable.
+
 ## MergeMidi
 
 Combines two MIDI tracks for the purposes of merging Rock Band MIDIs with on-disc upgrades. Deletes any tracks from the first MIDI that are shared between the input and replaces them with the tracks from the second MIDI.
