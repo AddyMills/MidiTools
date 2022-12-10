@@ -1,2 +1,10 @@
 
 MergeMidi/output/
+MergeMidi/build/
+MergeMidi/dist/
+ReadMidi/output/
+ReadMidi/build/
+ReadMidi/dist/
+*.spec
+*.pyc
+.idea/
