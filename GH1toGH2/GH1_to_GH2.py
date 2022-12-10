@@ -31,17 +31,17 @@ triggers_swap = {
     "gtr_half_tempo": "[half_tempo]",
     "bass_half_tempo": "[half_tempo]",
     "drum_half_tempo": "[half_tempo]",
-    "crowd_half_tempo": "[half_tempo]",
+    "crowd_half_tempo": "[crowd_half_tempo]",
     "sing_half_tempo": "[half_tempo]",
     "gtr_normal_tempo": "[normal_tempo]",
     "bass_normal_tempo": "[normal_tempo]",
     "drum_normal_tempo": "[normal_tempo]",
-    "crowd_normal_tempo": "[normal_tempo]",
+    "crowd_normal_tempo": "[crowd_normal_tempo]",
     "sing_normal_tempo": "[normal_tempo]",
     "gtr_double_tempo": "[double_tempo]",
     "bass_double_tempo": "[double_tempo]",
     "drum_double_tempo": "[double_tempo]",
-    "crowd_double_tempo": "[double_tempo]",
+    "crowd_double_tempo": "[crowd_double_tempo]",
     "sing_double_tempo": "[double_tempo]",
     # Hand and Strum Maps
     "HandMap_Default": "[map HandMap_Default]",
@@ -67,6 +67,7 @@ def append_note(track, note, note_type, velocity, event_time):
 if __name__ == "__main__":
     # Read the MIDI and put all the tracks in a dict for easy access
     mid = MidiFile(sys.argv[1])
+    # print(mid.ticks_per_beat)
     if len(sys.argv) > 2:
         output = sys.argv[2]
     else:
