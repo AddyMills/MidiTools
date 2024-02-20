@@ -1,6 +1,21 @@
 # MidiTools
 Scripts that modify MIDI files in some way
 
+## Fortnite Festival to Rock Band
+
+A script to move all the events from Fortnite standards to to Rock Band. This includes:
+- Moving all animation notes from PART X to PLASTIC X
+- Moving all text events from PART X to PLASTIC X
+  - [idle_mellow] also gets renamed to [idle]
+- Deleting the PART X tracks and renaming PLASTIC X to PART X
+- Making sections based on the SECTION track. It currently reads the sections found in there and appends the current count of that event
+- File will be saved in the same folder as the input with "_RB" appended to the name or a custom output
+
+Usage:
+- Run the script with a midi file as the first argument
+- Optionally: Enter in a folder or file path for the output.
+  - If a folder is entered, or a file that does not end in .mid, the output will be the input filename with "_RB" appended to it, but placed in the folder of the output argument
+
 ## LyricsNotes
 
 Add notes to lyrics events. Open the script and modify the "toAdd" variable to add your own track names.
