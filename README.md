@@ -3,7 +3,7 @@ Scripts that modify MIDI files in some way
 
 ## Fortnite Festival to Rock Band
 
-A script to move all the events from Fortnite standards to to Rock Band. This includes:
+A script to move all the events from Fortnite standards to Rock Band. This includes:
 - Moving all animation notes from PART X to PLASTIC X
 - Moving all text events from PART X to PLASTIC X
   - [idle_mellow] also gets renamed to [idle]
